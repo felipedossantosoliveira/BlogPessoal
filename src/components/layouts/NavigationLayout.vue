@@ -19,7 +19,7 @@ export default {
                 </radialGradient>
                 </defs>
             </svg>
-            <p class="sm:text-4xl text-2xl font-bold">Felipe dos Santos</p>
+            <p class="sm:text-4xl text-2xl font-bold">Felipe dos Santoss</p>
         </span>
         <button class="sm:hidden" @click="showNav = ! showNav">
             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2 w-8" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">

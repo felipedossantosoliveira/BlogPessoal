@@ -14,7 +14,7 @@ export default {
 <template>
     <NavigationLayout/>
     <main class="xl:mx-56 mx-16 my-14">
-      <section class="relative">
+      <!-- <section class="relative">
         <span class="absolute top-5 left-0 lg:w-72 w-48">
           <figure>
             <img src="../src/assets/img/Foto.jpg" alt="Foto de Felipe dos Santos Oliveira" class="w-full">
@@ -26,6 +26,6 @@ export default {
         <div class="h-[39rem] flex ml-24 bg-zinc-900">
 
         </div>
-      </section>
+      </section> -->
     </main>
 </template>

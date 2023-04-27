@@ -9,11 +9,11 @@ docker compose up -d
 ### Compile and Hot-Reload for Development
 
 ```sh
-docker exec -it vitedocker sh -c "npm run dev"
+docker exec -it vitedocker sh -c "npm i && npm run dev"
 ```
 
 ### Compile and Minify for Production
 
 ```sh
-docker exec -it vitedocker sh -c "npm run build"
+docker exec -it vitedocker sh -c "npm i && npm run build"
 ```

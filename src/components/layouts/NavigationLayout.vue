@@ -3,14 +3,64 @@ export default {
     data() {
         return {
             showNav: false,
+            navlinks: [
+                { name: 'Home', link: '#', active: true },
+                { name: 'Contatos', link: '#', active: false },
+                { name: 'Sobre', link: '#', active: false },
+            ]
         }
     }
 }
 </script>
 <template>
-    <header class="bg-zinc-900 py-5 px-5 sm:px-16 xl:px-64 flex flex-wrap justify-between items-center text-white sm:space-y-6 lg:space-y-0">
+    <header class="grid grid-cols-3 px-10 mt-8 text-white">
+        <div class="flex items-end text-lg ">
+            <!-- <svg class="sm:w-10 w-8" viewBox="0 0 322 397" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M161 356V266C161 249.431 174.431 236 191 236H206C222.569 236 236 222.569 236 206V191C236 174.431 222.569 161 206 161H41C24.4315 161 11 147.569 11 131V116C11 99.4315 24.4315 86 41 86H281C297.569 86 311 72.5685 311 56V41C311 24.4315 297.569 11 281 11H116C99.4315 11 86 24.4315 86 41V356C86 372.569 99.4315 386 116 386H131C147.569 386 161 372.569 161 356Z" stroke="url(#paint0_diamond_5_50)" stroke-width="22"/>
+                <defs>
+                <radialGradient id="paint0_diamond_5_50" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(207 45) rotate(116.687) scale(523.241 418.593)">
+                <stop stop-color="#4C8764"/>
+                <stop offset="1" stop-color="#93AFD1"/>
+                </radialGradient>
+                </defs>
+            </svg> -->
+            <div class="font-bold flex items-center space-x-2">
+                <p
+                    class="text-4xl -translate-y-0.5 bg-clip-text text-transparent bg-gradient-to-b from-orange-400 to-pink-600">
+                    {</p>
+                <p class="text-2xl">Felipe dos Santos</p>
+                <p
+                    class="text-4xl -translate-y-0.5 bg-clip-text text-transparent bg-gradient-to-b to-orange-400 from-pink-600">
+                    }</p>
+            </div>
+        </div>
+        <div class="flex items-center justify-center space-x-10">
+            <button v-for="navlink in navlinks" class="group">
+                <p :class="navlink.active ? 'font-bold' : ''">{{ navlink.name }}</p>
+                <div
+                    :class="[navlink.active ? 'w-3' : 'w-0', 'h-[3px] group-hover:w-full transition-all duration-300 bg-gradient-to-r from-orange-400 to-pink-600 rounded-full']">
+                </div>
+            </button>
+        </div>
+        <a href="https://github.com/felipedossantosoliveira/BlogPessoal" target="_blank" class="flex justify-end items-center space-x-2 font-semibold">
+            <p class="text-2xl -translate-y-0.5 bg-clip-text text-transparent bg-gradient-to-b to-orange-400 from-pink-600">
+                &lt;</p>
+            <p>Source code</p>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github w-7 sm:w-6 lg:w-6"
+                viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path
+                    d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5">
+                </path>
+            </svg>
+            <p class="text-2xl -translate-y-0.5 bg-clip-text text-transparent bg-gradient-to-b to-orange-400 from-pink-600">
+                /></p>
+        </a >
+    </header>
+    <!-- <header class="bg-zinc-900 py-5 px-5 sm:px-16 xl:px-16 flex flex-wrap justify-between items-center text-white sm:space-y-6 lg:space-y-0">
         <span class="flex items-center lg:justify-start sm:justify-center space-x-4 lg:w-auto sm:w-full">
-            <svg class="sm:w-12 w-8" viewBox="0 0 322 397" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="sm:w-8 w-8" viewBox="0 0 322 397" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M161 356V266C161 249.431 174.431 236 191 236H206C222.569 236 236 222.569 236 206V191C236 174.431 222.569 161 206 161H41C24.4315 161 11 147.569 11 131V116C11 99.4315 24.4315 86 41 86H281C297.569 86 311 72.5685 311 56V41C311 24.4315 297.569 11 281 11H116C99.4315 11 86 24.4315 86 41V356C86 372.569 99.4315 386 116 386H131C147.569 386 161 372.569 161 356Z" stroke="url(#paint0_diamond_5_50)" stroke-width="22"/>
                 <defs>
                 <radialGradient id="paint0_diamond_5_50" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(207 45) rotate(116.687) scale(523.241 418.593)">
@@ -19,7 +69,7 @@ export default {
                 </radialGradient>
                 </defs>
             </svg>
-            <p class="sm:text-4xl text-2xl font-bold">Felipe dos Santos</p>
+            <p class="sm:text-2xl text-2xl font-semibold">Felipe dos Santos</p>
         </span>
         <button class="sm:hidden" @click="showNav = ! showNav">
             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2 w-8" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -133,5 +183,4 @@ export default {
                 </li>
             </ul>
         </nav>
-    </header>
-</template>
+    </header> --></template>

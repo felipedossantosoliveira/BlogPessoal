@@ -14,9 +14,22 @@ export default {
 <template>
     <NavigationLayout/>
     <main class="px-10">
-        <section class="flex h-[700px] w-full border border-neutral-100 rounded-[4rem]">
-
+        <section>
+          <div  class="flex justify-center w-full">
+            <div class="space-y-4">
+              <div class="w-36 h-36 overflow-hidden bg-gradient-to-r from-orange-700 to-pink-600 rounded-full">
+                <img src="../src/assets/img/foto.png" alt="Foto de Felipe dos Santos Oliveira" class="-translate-x-1.5  w-full">
+              </div>
+              <p class="text-center text-neutral-200 text-sm font-semi-bold">Hi. I am Felipe!</p>
+            </div>
+          </div>
+          <div class="flex justify-center bg-clip-text text-transparent bg-gradient-to-r from-white via-orange-100/80 to-orange-600 text-center my-16 leading-[3rem] font-semibold text-4xl ">
+            <p>Front-end developer.<br>Construindo produtos digitais, e<br>experiências.</p>
+          </div>
         </section>
+        <div class="flex w-full h-2">
+
+        </div>
       <!-- <section class="relative">
         <span class="absolute top-5 left-0 lg:w-72 w-48">
           <figure>

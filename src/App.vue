@@ -13,7 +13,10 @@ export default {
 
 <template>
     <NavigationLayout/>
-    <main class="xl:mx-56 mx-16 my-14">
+    <main class="px-10">
+        <section class="flex h-[700px] w-full border border-neutral-100 rounded-[4rem]">
+
+        </section>
       <!-- <section class="relative">
         <span class="absolute top-5 left-0 lg:w-72 w-48">
           <figure>

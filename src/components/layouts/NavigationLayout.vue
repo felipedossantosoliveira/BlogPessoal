@@ -13,7 +13,8 @@ export default {
 }
 </script>
 <template>
-    <header class="grid grid-cols-3 px-10 mt-8 text-white">
+    <header class="px-10">
+        <div class="grid grid-cols-3 my-8 text-white">
         <div class="flex items-end text-lg ">
             <!-- <svg class="sm:w-10 w-8" viewBox="0 0 322 397" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M161 356V266C161 249.431 174.431 236 191 236H206C222.569 236 236 222.569 236 206V191C236 174.431 222.569 161 206 161H41C24.4315 161 11 147.569 11 131V116C11 99.4315 24.4315 86 41 86H281C297.569 86 311 72.5685 311 56V41C311 24.4315 297.569 11 281 11H116C99.4315 11 86 24.4315 86 41V356C86 372.569 99.4315 386 116 386H131C147.569 386 161 372.569 161 356Z" stroke="url(#paint0_diamond_5_50)" stroke-width="22"/>
@@ -26,11 +27,11 @@ export default {
             </svg> -->
             <div class="font-bold flex items-center space-x-2">
                 <p
-                    class="text-4xl -translate-y-0.5 bg-clip-text text-transparent bg-gradient-to-b from-orange-400 to-pink-600">
+                    class="text-4xl -translate-y-[4px] bg-clip-text text-transparent bg-gradient-to-b from-orange-400 to-pink-600">
                     {</p>
                 <p class="text-2xl">Felipe dos Santos</p>
                 <p
-                    class="text-4xl -translate-y-0.5 bg-clip-text text-transparent bg-gradient-to-b to-orange-400 from-pink-600">
+                    class="text-4xl -translate-y-[4px] bg-clip-text text-transparent bg-gradient-to-b to-orange-400 from-pink-600">
                     }</p>
             </div>
         </div>
@@ -57,6 +58,9 @@ export default {
             <p class="text-2xl -translate-y-0.5 bg-clip-text text-transparent bg-gradient-to-b to-orange-400 from-pink-600">
                 /></p>
         </a >
+        </div>
+<!--        <div class="w-full h-px opacity-40 bg-gradient-to-r to-pink-400 from-orange-600">-->
+<!--        </div>-->
     </header>
     <!-- <header class="bg-zinc-900 py-5 px-5 sm:px-16 xl:px-16 flex flex-wrap justify-between items-center text-white sm:space-y-6 lg:space-y-0">
         <span class="flex items-center lg:justify-start sm:justify-center space-x-4 lg:w-auto sm:w-full">

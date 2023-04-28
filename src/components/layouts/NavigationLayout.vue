@@ -81,8 +81,8 @@ export default {
           leave-from-class="opacity-100"
           leave-to-class="opacity-0"
         >
-        <div class="mb-10">
-            <slot v-if="show">
+        <div v-if="show" class="mb-10">
+            <slot >
             </slot>
         </div>
     </transition>

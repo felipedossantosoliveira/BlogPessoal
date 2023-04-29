@@ -1,5 +1,7 @@
 <script>
 import NavigationLayout from "@/components/layouts/NavigationLayout.vue"
+import IconVue from "@/components/icons/IconVue.vue"
+import IconTailwind from "@/components/icons/IconTailwind.vue"
 export default {
   data() {
     return {
@@ -7,6 +9,8 @@ export default {
   },
   components: {
     NavigationLayout,
+    IconVue,
+    IconTailwind
   }
 }
 </script>
@@ -26,7 +30,7 @@ export default {
         </div>
         <div
           class="flex justify-center bg-clip-text text-transparent bg-gradient-to-r from-white via-orange-100/80 to-orange-600 text-center mt-16 leading-[3rem] font-semibold text-4xl ">
-          <p>Front-end developer.<br>Construindo produtos digitais, e<br>experiências.</p>
+          <p>Front-end developer.<br>Construindo produtos digitais e<br>experiências.</p>
         </div>
         <div class="flex items-center justify-center my-10">
           <button class="px-4 py-2 text-neutral-200 border border-orange-200 hover:border-orange-500 rounded-lg flex items-center space-x-2">
@@ -46,16 +50,8 @@ export default {
       </section>
       <div class="flex w-full py-px bg-gradient-to-r from-orange-700 to-pink-600">
         <div class="w-full h-full p-7 bg-zinc-900 grid grid-cols-5">
-          <div class="flex justify-center items-end grayscale">
-            <svg class="w-20" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 122.88 106.42"
-              style="enable-background:new 0 0 122.88 106.42" xml:space="preserve">
-              <g>
-                <polygon class="fill-[#4DBA87]" points="75.63,0 61.44,24.58 47.25,0 0,0 61.44,106.42 122.88,0 75.63,0" />
-                <polygon class="fill-[#425466]" points="75.63,0 61.44,24.58 47.25,0 24.58,0 61.44,63.85 98.3,0 75.63,0" />
-              </g>
-            </svg>
-            <!-- <p class="text-neutral-200 text-lg font-bold">VueJS</p> -->
+          <div class="flex justify-center items-end grayscale hover:grayscale-0">
+            <IconVue class="w-20"/>
           </div>
           <div class="flex justify-center items-end grayscale">
             <svg class="w-20" viewBox="0 0 1000 1000" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -28,15 +28,6 @@ export default {
         >
         <div v-if="show" class="grid grid-cols-3 my-8 text-white">
         <div class="flex items-end text-lg ">
-            <!-- <svg class="sm:w-10 w-8" viewBox="0 0 322 397" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M161 356V266C161 249.431 174.431 236 191 236H206C222.569 236 236 222.569 236 206V191C236 174.431 222.569 161 206 161H41C24.4315 161 11 147.569 11 131V116C11 99.4315 24.4315 86 41 86H281C297.569 86 311 72.5685 311 56V41C311 24.4315 297.569 11 281 11H116C99.4315 11 86 24.4315 86 41V356C86 372.569 99.4315 386 116 386H131C147.569 386 161 372.569 161 356Z" stroke="url(#paint0_diamond_5_50)" stroke-width="22"/>
-                <defs>
-                <radialGradient id="paint0_diamond_5_50" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(207 45) rotate(116.687) scale(523.241 418.593)">
-                <stop stop-color="#4C8764"/>
-                <stop offset="1" stop-color="#93AFD1"/>
-                </radialGradient>
-                </defs>
-            </svg> -->
             <div class="font-bold flex items-center space-x-2">
                 <p
                     class="text-4xl -translate-y-[4px] bg-clip-text text-transparent bg-gradient-to-b from-orange-400 to-pink-600">

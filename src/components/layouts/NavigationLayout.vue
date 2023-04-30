@@ -1,6 +1,6 @@
 <script>
 import Logo from '../logo/Logo.vue';
-import {Bars3Icon} from '@heroicons/vue/24/solid';
+import {Bars3Icon} from '@heroicons/vue/24/outline';
 
 export default {
     data() {
@@ -17,7 +17,11 @@ export default {
     mounted() {
         this.show = true;
     },
-    components: { Logo }
+    components: { 
+        Logo,
+        Bars3Icon 
+    
+    }
 }
 </script>
 <template>
@@ -67,11 +71,11 @@ export default {
           leave-from-class="opacity-100"
           leave-to-class="opacity-0"
         >
-        <div v-if="show" class="grid my-8 text-white">
+        <div v-if="show" class="flex justify-between my-8 text-white">
         <logo/>
-            <button>
-                <Bars3Icon/>
-            </button>
+        <button>
+            <Bars3Icon class="w-10 text-white"/>
+        </button>
         <!-- <div class="flex items-center justify-center space-x-10">
             <button v-for="navlink in navlinks" class="group">
                 <p :class="navlink.active ? 'font-bold' : ''">{{ navlink.name }}</p>

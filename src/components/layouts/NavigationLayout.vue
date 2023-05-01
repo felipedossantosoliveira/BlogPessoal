@@ -11,11 +11,14 @@ export default {
                 { name: "Contatos", link: "#", active: false },
                 { name: "Sobre", link: "#", active: false },
             ],
-            show: false
+            show: false,
+            showNavItems: false,
         };
     },
     mounted() {
         this.show = true;
+        console.log(this.$route);
+        this.teste = this.$route
     },
     components: { 
         Logo,
@@ -70,12 +73,35 @@ export default {
           leave-active-class="ease-in duration-200"
           leave-from-class="opacity-100"
           leave-to-class="opacity-0"
+          >
+          <div v-if="show" class="flex justify-between my-8 text-white">
+            <logo/>
+            <button @click="showNavItems = !showNavItems">
+                <Bars3Icon class="w-10 text-white"/>
+            </button>
+        </div>
+    </transition>
+    <div>
+        <transition
+          enter-active-class="ease-out duration-500"
+          enter-from-class="opacity-75 -translate-y-24"
+          enter-to-class="opacity-100 translate-y-0 "
+          leave-active-class="ease-in duration-500"
+          leave-from-class="opacity-100 translate-y-0"
+          leave-to-class="opacity-75 -translate-y-36"
         >
-        <div v-if="show" class="flex justify-between my-8 text-white">
-        <logo/>
-        <button>
-            <Bars3Icon class="w-10 text-white"/>
-        </button>
+        <div v-if="showNavItems" class="flex flex-col items-center border-b pb-5 justify-center space-y-2 bg-red-200/30">
+            <button v-for="navlink in navlinks" class="group w-full">
+                <div class="w-full bg-red-100/20">
+                    <p :class="[navlink.active ? 'font-bold' : '', 'text-white']">{{ navlink.name }}</p>
+                    <!-- <div
+                        :class="[navlink.active ? 'w-3' : 'w-0', 'h-[3px] group-hover:w-full transition-all duration-300 bg-gradient-to-r from-orange-400 to-pink-600 rounded-full']">
+                    </div> -->
+                </div>
+            </button>
+        </div>
+        </transition>
+    </div>
         <!-- <div class="flex items-center justify-center space-x-10">
             <button v-for="navlink in navlinks" class="group">
                 <p :class="navlink.active ? 'font-bold' : ''">{{ navlink.name }}</p>
@@ -99,8 +125,6 @@ export default {
             <p class="text-2xl -translate-y-0.5 bg-clip-text text-transparent bg-gradient-to-b to-orange-400 from-pink-600">
                 /></p>
         </a > -->
-        </div>
-        </transition>
     </header>
     <transition
           enter-active-class="ease-out duration-1000"

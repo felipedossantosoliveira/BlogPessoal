@@ -30,9 +30,9 @@ const languages = [
 </script>
 <template>
 	<div class="flex w-full py-px bg-gradient-to-r from-orange-700 to-pink-600">
-			<div class="w-full h-full p-7 bg-zinc-900 grid grid-cols-5">
+			<div class="w-full h-full p-4 sm:p-7 gap-x-4 bg-zinc-900 grid grid-cols-5">
 				<div v-for="icon in languages" class="flex justify-center items-end grayscale hover:grayscale-0">
-					<component :is="icon.icon" class="w-20" />
+					<component :is="icon.icon" class="sm:w-20 w-10" />
 				</div>
 			</div>
 		</div>

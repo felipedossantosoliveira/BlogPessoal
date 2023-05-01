@@ -3,7 +3,7 @@ import Languages from "./partial/Languages.vue"
 
 </script>
 <template>
-	<main class="px-10 mt-20">
+	<main class="sm:px-10 px-4 mt-10 sm:mt-20">
 		<section>
 			<div class="flex justify-center w-full">
 				<div class="space-y-4">
@@ -15,7 +15,7 @@ import Languages from "./partial/Languages.vue"
 				</div>
 			</div>
 			<div
-				class="flex justify-center bg-clip-text text-transparent bg-gradient-to-r from-white via-orange-100/80 to-orange-600 text-center mt-16 leading-[3rem] font-semibold text-4xl ">
+				class="flex justify-center bg-clip-text text-transparent bg-gradient-to-r from-white via-orange-100/80 to-orange-600 text-center mt-5 sm:mt-16 sm:leading-[3rem] font-semibold text-xl sm:text-4xl ">
 				<p>Front-end developer.<br>Construindo produtos digitais e<br>proporcionando experiências.</p>
 			</div>
 			<div class="flex items-center justify-center my-10">
@@ -36,9 +36,7 @@ import Languages from "./partial/Languages.vue"
 			</div>
 		</section>
 		<section>
-			<div class="flex w-full py-px bg-gradient-to-r from-orange-700 to-pink-600">
 				<Languages />
-			</div>
 		</section>
 	</main>
 </template>	

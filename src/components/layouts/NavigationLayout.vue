@@ -77,7 +77,7 @@ export default {
           <div v-if="show" class="flex justify-between my-8 text-white">
             <logo/>
             <button @click="showNavItems = !showNavItems">
-                <Bars3Icon class="w-10 text-white"/>
+                <Bars3Icon :class="[showNavItems ? '-rotate-180' : 'rotate-0', 'duration-500 transition-all w-8 sm:w-10 text-white']"/>
             </button>
         </div>
     </transition>
@@ -90,9 +90,9 @@ export default {
           leave-from-class="opacity-100 translate-y-0"
           leave-to-class="opacity-75 -translate-y-36"
         >
-        <div v-if="showNavItems" class="flex flex-col items-center border-b pb-5 justify-center space-y-2 bg-red-200/30">
-            <button v-for="navlink in navlinks" class="group w-full">
-                <div class="w-full bg-red-100/20">
+        <div v-if="showNavItems" class="flex flex-col items-center justify-center space-y-2">
+            <button v-for="navlink in navlinks"  :class="[navlink.active ? 'bg-gradient-to-r from-orange-600 to-pink-600' : 'bg-neutral-500', 'group rounded-full p-px w-full']">
+                <div class="w-full p-2 bg-zinc-900 group-hover:bg-zinc-800 rounded-full">
                     <p :class="[navlink.active ? 'font-bold' : '', 'text-white']">{{ navlink.name }}</p>
                     <!-- <div
                         :class="[navlink.active ? 'w-3' : 'w-0', 'h-[3px] group-hover:w-full transition-all duration-300 bg-gradient-to-r from-orange-400 to-pink-600 rounded-full']">

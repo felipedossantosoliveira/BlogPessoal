@@ -45,3 +45,7 @@ npm run build
 >[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 >[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 >```
+
+## Agradecimentos
+
+[Artur Ferreto](https://github.com/arturferreto) - Por ser um incrível amigo e companheiro de trabalho 
